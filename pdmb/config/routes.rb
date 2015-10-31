@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "movies#index"
-  resources :reviews, only: [:new, :edit, :destroy]
+  resources :reviews, except: [:index, :show]
   resources :users, only: [:index, :show]
   resources :movies
   resources :directors
