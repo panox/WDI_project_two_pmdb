@@ -10,7 +10,7 @@
 
 <% @user.reviews.reverse_each do |review| %>
   <br >
-  <%= review.title %> By <%= review.user.username %>
+  <%= review.title %> For <%= review.movie.name %>
   <br >
   <%= review.content %>
   <br >
