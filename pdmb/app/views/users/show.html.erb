@@ -7,3 +7,14 @@
 <p>
   <%= image_tag @user.picture %>
 </p>
+
+<h4>Reviews</h4>
+
+<% @user.reviews.reverse_each do |review| %>
+  <%= review.title %> By <%= review.user.username %>
+  <br >
+  <%= review.content %>
+  <br >
+  <%= link_to 'Edit', edit_review_path(review) %>
+  <%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
