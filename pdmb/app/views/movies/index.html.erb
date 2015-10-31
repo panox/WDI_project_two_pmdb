@@ -6,7 +6,7 @@
     <%= movie.name %>
     (<%= movie.year %>)
     <%= movie.country %>
-    By <%= movie.director.name %>
+    By <%= link_to movie.director.name, movie.director %>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= movie.trailer %>" frameborder="0" allowfullscreen></iframe>
     <%= link_to 'Show', movie %>
     <%= link_to 'Edit', edit_movie_path(movie) %>
