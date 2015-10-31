@@ -1,34 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @movie.name %>
-</p>
+
+<%= @movie.name %>
+(<%= @movie.year %>)
+<%= @movie.country %>
 
 <p>
-  <strong>Year:</strong>
-  <%= @movie.year %>
+  By <%= link_to @movie.director.name, @movie.director %>
 </p>
 
-<p>
-  <strong>Trailer:</strong>
-  <%= @movie.trailer %>
-</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @movie.trailer %>" frameborder="0" allowfullscreen></iframe>
 
-<p>
-  <strong>Genre:</strong>
-  <%= @movie.genre %>
-</p>
-
-<p>
-  <strong>Country:</strong>
-  <%= @movie.country %>
-</p>
-
-<p>
-  <strong>Director:</strong>
-  <%= @movie.director %>
-</p>
-
+<footer>
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>
+</footer>
