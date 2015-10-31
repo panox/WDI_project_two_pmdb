@@ -16,5 +16,14 @@
   <%= @director.description %>
 </p>
 
+<select name="movies" onchange="location = this.value">
+  <% @director.movies.each do |movie| %>
+    <option>Movies</option>
+    <option value="<%= movie_path %>"><%= movie.name %></option>
+  <% end %>
+</select>
+
+<footer>
 <%= link_to 'Edit', edit_director_path(@director) %> |
 <%= link_to 'Back', directors_path %>
+</footer>
