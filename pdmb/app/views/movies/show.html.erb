@@ -20,9 +20,10 @@
   <br >
   <%= review.content %>
   <br >
-  <%= link_to 'Edit', edit_review_path(review) %>
-  <%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% if user_signed_in? && current_user.email == review.user.email %>
+    <%= link_to 'Edit', edit_review_path(review) %>
+    <%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 <% end %>
 
-<%= render 'review_form' %>
 <h5><%= link_to 'New Review', new_review_path %></h5>
