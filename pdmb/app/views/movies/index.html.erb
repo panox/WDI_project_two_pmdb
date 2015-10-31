@@ -4,7 +4,10 @@
     <%= link_to movie.name, movie %>
     (<%= movie.year %>)
     <%= movie.country %>
-    By <%= link_to movie.director.name, movie.director %>
+    By
+    <% if movie.director %>
+      <%= link_to movie.director.name, movie.director %>
+    <% end %>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= movie.trailer %>" frameborder="0" allowfullscreen></iframe>
     <%= link_to 'Edit', edit_movie_path(movie) %>
     <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -3,7 +3,10 @@
 <%= @movie.country %>
 
 <p>
-  By <%= link_to @movie.director.name, @movie.director %>
+  By
+  <% if movie.director %>
+    <%= link_to @movie.director.name, @movie.director %>
+  <% end %>
 </p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @movie.trailer %>" frameborder="0" allowfullscreen></iframe>
