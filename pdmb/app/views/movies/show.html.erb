@@ -16,15 +16,11 @@
 <h4>Reviews</h4>
 
 <% @movie.reviews.reverse_each do |review| %>
+  <br >
   <%= review.title %> By <%= review.user.username %>
   <br >
   <%= review.content %>
-  <br >
-  <% if user_signed_in? && current_user.email == review.user.email %>
-    <%= link_to 'Edit', edit_review_path(review) %>
-    <%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
   <br>
 <% end %>
 
-<h5><%= link_to 'New Review', new_review_path %></h5>
+<h5><%= link_to 'New Review', new_movie_review_path(@movie) %></h5>
