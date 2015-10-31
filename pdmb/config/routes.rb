@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews
   root "movies#index"
   resources :users, only: [:index, :show]
   resources :movies
