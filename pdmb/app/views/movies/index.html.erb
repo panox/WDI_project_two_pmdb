@@ -3,7 +3,7 @@
 <h1>Movies</h1>
 <section>
   <% @movies.each do |movie| %>
-    <%= movie.name %>
+    <%= link_to movie.name, movie %>
     (<%= movie.year %>)
     <%= movie.country %>
     By <%= link_to movie.director.name, movie.director %>
