@@ -21,6 +21,9 @@
   <br >
   <%= review.content %>
   <br>
+  <% if user_signed_in? && current_user.email == review.user.email %>
+    <%= link_to 'Edit', edit_movie_review_path(@movie, review) %>
+  <% end %>
 <% end %>
 
 <h5><%= link_to 'New Review', new_movie_review_path(@movie) %></h5>
