@@ -1,23 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
   <%= @director.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @director.description %>
-</p>
-
-<p>
-  <strong>Country:</strong>
   <%= @director.country %>
 </p>
 
 <p>
-  <strong>Picture:</strong>
-  <%= @director.picture %>
+  <%= image_tag @director.picture %>
+</p>
+
+<p>
+  <%= @director.description %>
 </p>
 
 <%= link_to 'Edit', edit_director_path(@director) %> |
