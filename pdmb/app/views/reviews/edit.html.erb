@@ -1,3 +1,5 @@
+<% session[:return_to] ||= request.referer %>
+
 <h1>Editing Review</h1>
 
 <%= render 'form' %>
