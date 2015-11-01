@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => :registrations }
   root "movies#index"
   resources :users, only: [:index, :show]
   resources :movies do 
