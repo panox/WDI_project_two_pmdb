@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# search
+gem 'ransack'
+#log in 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
