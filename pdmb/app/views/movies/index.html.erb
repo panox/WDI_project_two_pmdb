@@ -10,6 +10,7 @@
     <%= movie.country %>
     By <%= link_to movie.director.name, movie.director if movie.director %>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= movie.trailer %>" frameborder="0" allowfullscreen></iframe>
+    <%= rating_for movie, "overall", :disable_after_rate => false %>
     <%= link_to 'Edit', edit_movie_path(movie) %>
     <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>

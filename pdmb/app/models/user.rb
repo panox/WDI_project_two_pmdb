@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   validates_uniqueness_of  :email
   has_many :reviews, dependent: :destroy
+  ratyrate_rater
 end
