@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Director.create(name: "Chan-wook Park", description: "Chan-wook Park was born on August 23, 1963 in Seoul, South Korea.", country: "South Korea", picture: "http://ia.media-imdb.com/images/M/MV5BMTgyODk3MTU5OV5BMl5BanBnXkFtZTcwMTc3NjcyMQ@@._V1_UY317_CR14,0,214,317_AL_.jpg")
+Director.create(name: "Pedro Almodóvar", description: "The most internationally acclaimed Spanish filmmaker since Luis Buñuel was born in a small town (Calzada de Calatrava) in the impoverished Spanish region of La Mancha. He arrived in Madrid in 1968, and survived by selling used items in the flea-market called El Rastro.", country: "Spain", picture: "http://ia.media-imdb.com/images/M/MV5BNTE0NTk3NTMxOV5BMl5BanBnXkFtZTYwMzMxMjkz._V1_UX214_CR0,0,214,317_AL_.jpg")
 
-Movie.create(name: "Oldboy", year: "2003", trailer: "2HkjrJ6IK5E", genre: "", country: "South Korea", director_id: 2)
-Movie.create(name: "Sympathy for Lady Vengeance", year: "2005", trailer: "blAgspkgcZA", genre: "", country: "South Korea", director_id: 2)
-Movie.create(name: "Sympathy for Mr. Vengeance", year: "2002", trailer: "UXdtyYRkB0k", genre: "", country: "South Korea", director_id: 2)
+Movie.create(name: "The Skin I Live In", year: "2011", trailer: "EolQSTTTpI4", genre: "", country: "Spain", director_id: 3)
+Movie.create(name: "Volver", year: "2006", trailer: "9L2AJmNoUgo", genre: "", country: "Spain", director_id: 3)
+Movie.create(name: "Women on the Verge of a Nervous Breakdown", year: "1988", trailer: "PypMOEKJuh8", genre: "", country: "Spain", director_id: 3)
