@@ -55,7 +55,7 @@ class DirectorsController < ApplicationController
   # DELETE /directors/1
   # DELETE /directors/1.json
   def destroy
-    if current_user.admin?
+    if current_user.try(:admin?)
       @director.destroy
       respond_to do |format|
         format.html { redirect_to directors_url, notice: 'Director was successfully destroyed.' }

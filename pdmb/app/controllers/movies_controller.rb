@@ -63,7 +63,7 @@ class MoviesController < ApplicationController
   # DELETE /movies/1
   # DELETE /movies/1.json
   def destroy
-    if current_user.admin?
+    if current_user.try(:admin?)
       @movie.destroy
       respond_to do |format|
         format.html { redirect_to movies_url, notice: 'Movie was successfully destroyed.' }

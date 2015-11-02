@@ -9,7 +9,7 @@
     <%= rating_for movie, "overall", :disable_after_rate => false %>
     <%= link_to 'Edit', edit_movie_path(movie) %>
 
-    <% if current_user.admin? %>
+    <% if current_user.try(:admin?) %>
         <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
     <br >
