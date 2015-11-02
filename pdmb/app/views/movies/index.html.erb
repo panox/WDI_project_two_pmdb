@@ -2,9 +2,14 @@
 <section>
   <% @movies.each do |movie| %>
     <%= link_to movie.name, movie %>
-    (<%= movie.year %>)
+    (<%= movie.year %>)<br>
     <%= movie.country %>
     By <%= link_to movie.director.name, movie.director if movie.director %>
+    <% if movie.rating == 0 %>
+        No Rating Yet
+    <% else %>
+        Rating: <%= movie.rating %><br>
+    <% end %>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= movie.trailer %>" frameborder="0" allowfullscreen></iframe>
     <%= link_to 'Edit', edit_movie_path(movie) %>
 
