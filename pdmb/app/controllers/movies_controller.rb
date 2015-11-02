@@ -6,15 +6,15 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
     if params[:q] == nil
-      @movies = Movie.all
+      @movies = Movie.all.sort { |a,b| b.rating <=> a.rating}
     elsif params[:q] != ""
       if Movie.search_by_title(params[:q]) != []
         @movies = Movie.search_by_title(params[:q])
       else
-        @movies = Movie.all
+        @movies = Movie.all.sort { |a,b| b.rating <=> a.rating}
       end
     else 
-      @movies = Movie.all
+      @movies = Movie.all.sort { |a,b| b.rating <=> a.rating}
     end
   end
 
