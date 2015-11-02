@@ -9,7 +9,9 @@
         <td><%= director.country %></td>
         <td><%= image_tag director.picture %></td>
         <td><%= link_to 'Edit', edit_director_path(director) %></td>
+      <% if current_user.admin? %>
         <td><%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
       </tr>
     <% end %>
   </tbody>
