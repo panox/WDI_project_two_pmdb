@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Director.create(name: "Pedro Almodóvar", description: "The most internationally acclaimed Spanish filmmaker since Luis Buñuel was born in a small town (Calzada de Calatrava) in the impoverished Spanish region of La Mancha. He arrived in Madrid in 1968, and survived by selling used items in the flea-market called El Rastro.", country: "Spain", picture: "http://ia.media-imdb.com/images/M/MV5BNTE0NTk3NTMxOV5BMl5BanBnXkFtZTYwMzMxMjkz._V1_UX214_CR0,0,214,317_AL_.jpg")
+Director.create(name: "Kar Wai Wong", description: "Wong Kar-wai (born 17 July 1956) is a Hong Kong Second Wave filmmaker, internationally renowned as an auteur for his visually unique, highly stylised, emotionally resonant work", country: "China", picture: "http://ia.media-imdb.com/images/M/MV5BMTY4MTQyMjI4NV5BMl5BanBnXkFtZTcwNDk2MzQ2MQ@@._V1_UY317_CR1,0,214,317_AL_.jpg")
 
-Movie.create(name: "The Skin I Live In", year: "2011", trailer: "EolQSTTTpI4", genre: "", country: "Spain", director_id: 3)
-Movie.create(name: "Volver", year: "2006", trailer: "9L2AJmNoUgo", genre: "", country: "Spain", director_id: 3)
-Movie.create(name: "Women on the Verge of a Nervous Breakdown", year: "1988", trailer: "PypMOEKJuh8", genre: "", country: "Spain", director_id: 3)
+Movie.create(name: "In the Mood for Love", year: "2000", trailer: "BnFjSHQFVkA", genre: "", country: "China", director_id: 4)
+Movie.create(name: "2046", year: "2004", trailer: "3Tz6KgPfeuk", genre: "", country: "China", director_id: 4)
+Movie.create(name: "Chungking Express", year: "1994", trailer: "Bjd7PFf_TFw", genre: "", country: "China", director_id: 4)
