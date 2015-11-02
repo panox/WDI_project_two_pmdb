@@ -4,6 +4,4 @@ class Movie < ActiveRecord::Base
   #Pg Search
   include PgSearch
   pg_search_scope :search_by_title, :against => :name
-  #Ratings
-  ratyrate_rateable "overall"
 end

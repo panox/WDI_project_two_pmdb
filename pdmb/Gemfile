@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-#rating
-gem 'ratyrate'
+
 # search
 gem 'pg_search'
 #log in 
