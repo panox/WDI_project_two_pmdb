@@ -5,8 +5,10 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
   def index
-    @q = Movie.ransack(params[:q])
-    @movies = @q.result(distinct: true)
+    # @q = Movie.ransack(params[:q])
+    # @movies = @q.result(distinct: true)
+    @movies = Movie.with_ratings
+
   end
 
   # GET /movies/1
