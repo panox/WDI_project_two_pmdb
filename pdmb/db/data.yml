@@ -1,0 +1,264 @@
+
+---
+directors:
+  columns:
+  - id
+  - name
+  - description
+  - country
+  - picture
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - Jim Jarmusch
+    - Moved to New York City at the age of seventeen from Akron, Ohio. Graduated from
+      Columbia University with a B.A. in English, class of '75. Without any prior
+      film experience, he was accepted into the Tisch School of the Arts, New York.
+    - USA
+    - http://ia.media-imdb.com/images/M/MV5BMTYyODUwNDA2Nl5BMl5BanBnXkFtZTgwOTA4MDEyMDE@._V1_UY317_CR4,0,214,317_AL_.jpg
+    - '2015-10-31 11:55:28.925286'
+    - '2015-10-31 11:55:28.925286'
+  - - '2'
+    - Chan-wook Park
+    - Chan-wook Park was born on August 23, 1963 in Seoul, South Korea.
+    - South Korea
+    - http://ia.media-imdb.com/images/M/MV5BMTgyODk3MTU5OV5BMl5BanBnXkFtZTcwMTc3NjcyMQ@@._V1_UY317_CR14,0,214,317_AL_.jpg
+    - '2015-11-02 14:46:10.625945'
+    - '2015-11-02 14:46:10.625945'
+  - - '3'
+    - Pedro Almodóvar
+    - The most internationally acclaimed Spanish filmmaker since Luis Buñuel was born
+      in a small town (Calzada de Calatrava) in the impoverished Spanish region of
+      La Mancha. He arrived in Madrid in 1968, and survived by selling used items
+      in the flea-market called El Rastro.
+    - Spain
+    - http://ia.media-imdb.com/images/M/MV5BNTE0NTk3NTMxOV5BMl5BanBnXkFtZTYwMzMxMjkz._V1_UX214_CR0,0,214,317_AL_.jpg
+    - '2015-11-02 14:56:00.901434'
+    - '2015-11-02 14:56:00.901434'
+  - - '4'
+    - Kar Wai Wong
+    - Wong Kar-wai (born 17 July 1956) is a Hong Kong Second Wave filmmaker, internationally
+      renowned as an auteur for his visually unique, highly stylised, emotionally
+      resonant work
+    - China
+    - http://ia.media-imdb.com/images/M/MV5BMTY4MTQyMjI4NV5BMl5BanBnXkFtZTcwNDk2MzQ2MQ@@._V1_UY317_CR1,0,214,317_AL_.jpg
+    - '2015-11-02 15:05:52.207731'
+    - '2015-11-02 15:05:52.207731'
+
+---
+movies:
+  columns:
+  - id
+  - name
+  - year
+  - trailer
+  - genre
+  - country
+  - director_id
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - Ghost Dog
+    - '1999'
+    - tLb1TFruUoQ
+    - ''
+    - USA
+    - '1'
+    - '2015-10-31 12:08:06.21843'
+    - '2015-10-31 12:33:17.472907'
+  - - '2'
+    - Broken Flowers
+    - '2005'
+    - c_TB7MkrGyc
+    - ''
+    - ''
+    - '1'
+    - '2015-11-02 09:18:37.495447'
+    - '2015-11-02 09:18:37.495447'
+  - - '3'
+    - Dead Man
+    - '1995'
+    - nn2nQMfLqwg
+    - ''
+    - USA
+    - '1'
+    - '2015-11-02 14:34:07.492814'
+    - '2015-11-02 14:34:07.492814'
+  - - '5'
+    - Oldboy
+    - '2003'
+    - 2HkjrJ6IK5E
+    - ''
+    - South Korea
+    - '2'
+    - '2015-11-02 14:46:10.66478'
+    - '2015-11-02 14:46:10.66478'
+  - - '6'
+    - Sympathy for Lady Vengeance
+    - '2005'
+    - blAgspkgcZA
+    - ''
+    - South Korea
+    - '2'
+    - '2015-11-02 14:46:10.667823'
+    - '2015-11-02 14:46:10.667823'
+  - - '7'
+    - Sympathy for Mr. Vengeance
+    - '2002'
+    - UXdtyYRkB0k
+    - ''
+    - South Korea
+    - '2'
+    - '2015-11-02 14:46:10.671704'
+    - '2015-11-02 14:46:10.671704'
+  - - '8'
+    - The Skin I Live In
+    - '2011'
+    - EolQSTTTpI4
+    - ''
+    - Spain
+    - '3'
+    - '2015-11-02 14:56:00.936122'
+    - '2015-11-02 14:56:00.936122'
+  - - '9'
+    - Volver
+    - '2006'
+    - 9L2AJmNoUgo
+    - ''
+    - Spain
+    - '3'
+    - '2015-11-02 14:56:00.940697'
+    - '2015-11-02 14:56:00.940697'
+  - - '10'
+    - Women on the Verge of a Nervous Breakdown
+    - '1988'
+    - PypMOEKJuh8
+    - ''
+    - Spain
+    - '3'
+    - '2015-11-02 14:56:00.94392'
+    - '2015-11-02 14:56:00.94392'
+  - - '11'
+    - In the Mood for Love
+    - '2000'
+    - BnFjSHQFVkA
+    - ''
+    - China
+    - '4'
+    - '2015-11-02 15:05:52.232486'
+    - '2015-11-02 15:05:52.232486'
+  - - '12'
+    - '2046'
+    - '2004'
+    - 3Tz6KgPfeuk
+    - ''
+    - China
+    - '4'
+    - '2015-11-02 15:05:52.238028'
+    - '2015-11-02 15:05:52.238028'
+  - - '13'
+    - Chungking Express
+    - '1994'
+    - Bjd7PFf_TFw
+    - ''
+    - China
+    - '4'
+    - '2015-11-02 15:05:52.241091'
+    - '2015-11-02 15:05:52.241091'
+
+---
+reviews:
+  columns:
+  - id
+  - title
+  - content
+  - user_id
+  - movie_id
+  - created_at
+  - updated_at
+  records: 
+  - - '2'
+    - Second Review
+    - Even more review
+    - '2'
+    - '1'
+    - '2015-10-31 16:08:56.082057'
+    - '2015-10-31 17:14:58.417027'
+  - - '10'
+    - test for movie 1
+    - update
+    - '2'
+    - '1'
+    - '2015-11-02 14:08:54.592145'
+    - '2015-11-02 14:12:50.883613'
+
+---
+users:
+  columns:
+  - id
+  - username
+  - picture
+  - created_at
+  - updated_at
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - admin
+  records: 
+  - - '1'
+    - liger
+    - http://www.macmufasa.com/MacMufasa/MacMufasa.com-_Tech_Blog_&_Home_of_the_Song_a_Week_Project/Entries/2010/5/27_Song_a_Week_21_-_Ride_the_Liger_files/shapeimage_4.png
+    - '2015-10-31 13:10:30.556979'
+    - '2015-10-31 13:20:43.81147'
+    - ''
+    - ''
+    - 
+    - 
+    - 
+    - '0'
+    - 
+    - 
+    - 
+    - 
+    - false
+  - - '2'
+    - beary
+    - https://d22r54gnmuhwmk.cloudfront.net/photos/8/tt/ub/WotTuBQzQzQoeZY-128x128-noPad.jpg
+    - '2015-10-31 15:34:22.138454'
+    - '2015-11-02 15:02:27.467151'
+    - beary@gmail.com
+    - "$2a$10$dWVQExbwJYweRAqhbiDoL.KgjKv4ia5gTUtvvY7WluxcRMPu3lPLe"
+    - 
+    - 
+    - 
+    - '10'
+    - '2015-11-02 15:02:27.464976'
+    - '2015-11-02 13:38:11.621836'
+    - "::1"
+    - "::1"
+    - false
+  - - '3'
+    - Admin
+    - ''
+    - '2015-11-02 13:26:00.212742'
+    - '2015-11-02 14:47:35.204093'
+    - panospalos@gmail.com
+    - "$2a$10$BS2RD/ALu1igtgWj/BoWpOPduqpZUgZWh0SYMQrgeBywMxsF/wAce"
+    - 
+    - 
+    - 
+    - '2'
+    - '2015-11-02 14:47:35.201911'
+    - '2015-11-02 13:26:00.227633'
+    - "::1"
+    - "::1"
+    - true
