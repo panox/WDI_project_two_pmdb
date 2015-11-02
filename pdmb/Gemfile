@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 #rating
 gem 'ratyrate'
 # search
-gem 'ransack'
+gem 'pg_search'
 #log in 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

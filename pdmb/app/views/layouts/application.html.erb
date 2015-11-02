@@ -21,6 +21,12 @@
   <%= link_to 'Sign In', new_user_session_path %>
 <% end %>
 
+<%= form_tag("/movies", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 <nav>
   <%= link_to 'Director', directors_path %>
   <%= link_to 'Movies', movies_path %>
