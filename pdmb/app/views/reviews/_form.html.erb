@@ -1,3 +1,5 @@
+<% @review ||= review %>
+
 <%= form_for([@movie, @review]) do |f| %>
   <% if @review.errors.any? %>
     <div id="error_explanation">

@@ -16,6 +16,9 @@
 
 <h4>Reviews</h4>
 
+<%= render "reviews/form", review: Review.new %>
+
+
 <% @movie.reviews.reverse_each do |review| %>
   <br >
   <%= review.title %> By <%= review.user.username %>
