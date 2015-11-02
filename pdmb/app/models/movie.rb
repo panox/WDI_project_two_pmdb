@@ -6,6 +6,4 @@ class Movie < ActiveRecord::Base
   pg_search_scope :search_by_title, :against => :name
   #Ratings
   ratyrate_rateable "overall"
-  #Movie Rating Sorting 
-  scope :with_ratings, ->{includes(:rate_average_without_dimension).order("rating_caches.avg desc")}
 end
