@@ -25,6 +25,7 @@ class ReviewsController < ApplicationController
         format.html { redirect_to @movie }
         format.json { render :show, status: :created, location: @review }
       else
+        flash[:alert] = 'There was a problem creating the Review.'
         format.html { render :new }
         format.json { render json: @review.errors, status: :unprocessable_entity }
       end
@@ -38,6 +39,7 @@ class ReviewsController < ApplicationController
       flash[:success] = "Review was successfully updated."
       redirect_to session.delete(:return_to)
     else
+      flash[:alert] = 'There was a problem updating the Review.'
       render :edit
       #edit_movie_review_path(@movie, @review)
     end

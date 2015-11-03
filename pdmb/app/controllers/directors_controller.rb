@@ -33,6 +33,7 @@ class DirectorsController < ApplicationController
         format.html { redirect_to @director}
         format.json { render :show, status: :created, location: @director }
       else
+        flash[:alert] = 'There was a problem creating the Director.'
         format.html { render :new }
         format.json { render json: @director.errors, status: :unprocessable_entity }
       end
@@ -48,6 +49,7 @@ class DirectorsController < ApplicationController
         format.html { redirect_to @director }
         format.json { render :show, status: :ok, location: @director }
       else
+        flash[:alert] = 'There was a problem updating the Director.'
         format.html { render :edit }
         format.json { render json: @director.errors, status: :unprocessable_entity }
       end

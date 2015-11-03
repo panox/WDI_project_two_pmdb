@@ -43,6 +43,7 @@ class MoviesController < ApplicationController
         format.html { redirect_to @movie }
         format.json { render :show, status: :created, location: @movie }
       else
+        flash[:alert] = 'There was a problem creating the Movie.'
         format.html { render :new }
         format.json { render json: @movie.errors, status: :unprocessable_entity }
       end
@@ -58,6 +59,7 @@ class MoviesController < ApplicationController
         format.html { redirect_to @movie }
         format.json { render :show, status: :ok, location: @movie }
       else
+        flash[:alert] = 'There was a problem updating the Movie.'
         format.html { render :edit }
         format.json { render json: @movie.errors, status: :unprocessable_entity }
       end
