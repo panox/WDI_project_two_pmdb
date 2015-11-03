@@ -1,18 +1,16 @@
-<h1>Directors</h1>
-
-<table>
-
-  <tbody>
-    <% @directors.each do |director| %>
-      <tr>
-        <td><%= link_to director.name, director %></td>
-        <td><%= director.country %></td>
-        <td><%= image_tag director.picture %></td>
-        <td><%= link_to 'Edit', edit_director_path(director) %></td>
-      <% if current_user.try(:admin?) %>
-        <td><%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<div class="row">
+  <h1>Directors</h1>
+  <div class="medium-12 column">
+    <ul class="medium-block-grid-2">
+      <% @directors.each do |director| %>
+        <li><%= link_to director.name, director %></li>
+        <li><%= director.country %></li>
+        <li><%= image_tag director.picture %></li>
+        <li><%= link_to 'Edit', edit_director_path(director) %></li>
+        <% if current_user.try(:admin?) %>
+          <%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
       <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    </ul>
+  </div>
+</div>
