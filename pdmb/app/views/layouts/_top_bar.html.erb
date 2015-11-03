@@ -12,7 +12,7 @@
     <ul class="left">
       <% if user_signed_in? %>
         <li class="has-dropdown">
-        <%= link_to current_user.username %>
+        <%= link_to current_user.username, '#' %>
         <ul class="dropdown">
           <li><%= link_to 'My Page', current_user %></li>
           <li><%= link_to 'Account', edit_user_registration_path %></li>
