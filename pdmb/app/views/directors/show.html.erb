@@ -1,29 +1,24 @@
-<p>
-  <%= @director.name %>
-</p>
-
-<p>
-  <%= @director.country %>
-</p>
-
-<p>
-  <%= image_tag @director.picture %>
-</p>
-
-<p>
-  <%= @director.description %>
-</p>
-
-<select name="movies" onchange="location = this.value">
-  <option>Movies</option>
-  <% @director.movies.each do |movie| %>
-    <option value="<%= movie_path(movie) %>">
-      <%= movie.name %>
-    </option>
-  <% end %>
-</select>
-
-<footer>
-<%= link_to 'Edit', edit_director_path(@director) %> |
-<%= link_to 'Back', directors_path %>
-</footer>
+<div class="row show">
+  <header>
+    <%= @director.name %>
+    <%= @director.country %>
+  </header>
+  <section>
+    <%= image_tag @director.picture %>
+  </section>
+  <aside>
+    <%= @director.description %>
+  </aside>
+  <footer>
+    <select name="movies" onchange="location = this.value">
+      <option>Movies</option>
+      <% @director.movies.each do |movie| %>
+        <option value="<%= movie_path(movie) %>">
+          <%= movie.name %>
+        </option>
+      <% end %>
+    </select>
+    <%= link_to 'Edit', edit_director_path(@director) %> |
+    <%= link_to 'Back', directors_path %>
+  </footer>
+</div>
