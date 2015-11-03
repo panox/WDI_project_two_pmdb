@@ -16,11 +16,6 @@
 
     <%= render 'layouts/top_bar' %>
 
-    <%= form_tag( results_path, method: "get") do %>
-      <%= label_tag(:q, "Search Movies:") %>
-      <%= text_field_tag(:q) %>
-    <% end %>
-
     <div class="row">
       <% flash.each do |name, msg| %>
         <% if msg.is_a?(String) %>

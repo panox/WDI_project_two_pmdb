@@ -25,6 +25,21 @@
         <% end %>
       </ul>
 
+      <ul>
+        <li class="has-form">
+          <%= form_tag( results_path, method: "get") do %>
+            <div class="row collapse">
+              <div class="large-8 small-9 columns">
+                <%= text_field_tag(:q) %>
+              </div>
+              <div class="large-4 small-3 columns">
+                <button class="alert button expand">Search</button>
+              </div>
+            </div>
+          <% end %>
+        </li>
+      </ul>
+
       <ul class="right">
         <li class="has-dropdown">
           <a href="#">Directors</a>
