@@ -17,7 +17,9 @@
 <select name="movies" onchange="location = this.value">
   <option>Movies</option>
   <% @director.movies.each do |movie| %>
-    <option value="<%= movie_path %>"><%= movie.name %></option>
+    <option value="<%= movie_path(movie) %>">
+      <%= movie.name %>
+    </option>
   <% end %>
 </select>
 
