@@ -3,36 +3,62 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:multipart => true}) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :username %><br>
-    <%= f.text_field :username %>
+  <div class="row">
+    <div class="small-8 columns">
+      <div class="large-2 columns">
+        <%= f.label :username, class: "left inline" %>
+      </div>
+      <div class="large-10 columns">
+        <%= f.text_field :username %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="row">
+    <div class="small-8 columns">
+      <div class="large-2 columns">
+        <%= f.label :email, class: "left inline" %>
+      </div>
+      <div class="large-10 columns">
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="row">
+    <div class="small-8 columns">
+      <div class="large-2 columns">
+        <%= f.label :password %>
+      </div>
+      <div class="large-10 columns">
+        <%= f.password_field :password, autocomplete: "off" %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <div class="row">
+    <div class="small-8 columns">
+      <div class="large-2 columns">
+        <%= f.label :password_confirmation %>
+      </div>
+      <div class="large-10 columns">
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.file_field :picture %>
+  <div class="row">
+    <div class="small-3 small-offset-2 columns">
+      <%= f.file_field :picture %>
+    </div>
+    <div class="small-1 end columns">
+      <%= f.submit "Sign up" %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
