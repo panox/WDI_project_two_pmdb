@@ -15,7 +15,18 @@
   <body>
 
     <%= render 'layouts/top_bar' %>
+
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-info") %>
+    <% end %>
+
+    <%= form_tag( results_path, method: "get") do %>
+      <%= label_tag(:q, "Search Movies:") %>
+      <%= text_field_tag(:q) %>
+    <% end %>
+
     <%= yield %>
+
 
   </body>
 </html>
