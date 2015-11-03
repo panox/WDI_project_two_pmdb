@@ -1,16 +1,20 @@
 <div class="row">
   <h1>Directors</h1>
-  <div class="medium-12 columns">
+  <div class="medium-8 medium-offset-2 columns">
     <ul class="medium-block-grid-2">
       <% @directors.each do |director| %>
         <li>
-          <%= link_to director.name, director %>
-          <%= director.country %>
-          <%= link_to 'Edit', edit_director_path(director) %>
-          <%= image_tag director.picture %>
-          <% if current_user.try(:admin?) %>
-            <%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
+          <header>
+            <%= link_to director.name, director %>
+            <%= director.country %>
+            <%= link_to 'Edit', edit_director_path(director) %>
+            <% if current_user.try(:admin?) %>
+              <%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </header>
+          <section>
+            <%= image_tag director.picture %>
+          </section>
         </li>
       <% end %>
     </ul>
