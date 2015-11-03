@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+#foundation
+gem 'foundation-rails'
 # search
 gem 'pg_search'
 #log in 
