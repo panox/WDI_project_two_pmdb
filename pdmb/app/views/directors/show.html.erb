@@ -1,22 +1,20 @@
 <div class="row show">
-  <div class="medium-6 columns">
-    <header>
-      <%= @director.name %>
-      <%= @director.country %>
-    </header>
-    <section>
-      <%= image_tag @director.picture %>
-    </section>
-  </div>
-  <div class="medium-6 columns">
-    <aside>
-      <%= @director.description %>
-    </aside>
-  </div>
+  <header class="small-3 small-centered columns">
+    <%= @director.name %>
+    <%= @director.country %>
+  </header>
+</div>
+<div class="row show">
+  <section class="medium-offset-2 medium-3 columns">
+    <%= image_tag @director.picture %>
+  </section>
+  <aside class="medium-4 columns end">
+    <p><%= @director.description %></p>
+  </aside>
 </div>
 <div class="row show">
   <footer>
-    <div class="medium-10 columns">
+    <div class="medium-offset-2 medium-6 columns">
       <select name="movies" onchange="location = this.value">
         <option>Movies</option>
         <% @director.movies.each do |movie| %>
@@ -26,7 +24,7 @@
         <% end %>
       </select>
     </div>
-    <div class="medium-2 columns">
+    <div class="medium-2 columns end">
       <%= link_to 'Edit', edit_director_path(@director) %> |
       <%= link_to 'Back', directors_path %>
     </div>
