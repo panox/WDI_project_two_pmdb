@@ -2,9 +2,13 @@
 (<%= @movie.year %>)
 <%= @movie.country %>
 
-<p>
-  By <%= link_to @movie.director.name, @movie.director if @movie.director%>
-</p>
+
+By <%= link_to @movie.director.name, @movie.director if @movie.director%>
+<% if @movie.rating == 0 %>
+    No Rating Yet
+<% else %>
+    Rating: <%= @movie.rating %><br>
+<% end %>
 
 <header>
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
