@@ -1,20 +1,26 @@
-<section>
-  <% @movies.each do |movie| %>
-    <%= link_to movie.name, movie %>
-    (<%= movie.year %>)<br>
-    <%= movie.country %>
-    By <%= link_to movie.director.name, movie.director if movie.director %>
-    <% if movie.rating == 0 %>
-        No Rating Yet
-    <% else %>
-        Rating: <%= movie.rating %><br>
+<section class="row index">
+    <% @movies.each do |movie| %>
+        <header>
+            <div>
+                <% if movie.rating == 0 %>
+                    No Rating Yet
+                <% else %>
+                    Rating: <%= movie.rating %>
+                <% end %>
+            </div>
+            <%= link_to movie.name, movie %>
+            (<%= movie.year %>)
+            <%= movie.country %>
+            By <%= link_to movie.director.name, movie.director if movie.director %>
+        </header>
+        <section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= movie.trailer %>" frameborder="0" allowfullscreen></iframe>
+        </section>
+        <footer>
+            <%= link_to 'Edit', edit_movie_path(movie) %>   
+            <% if current_user.try(:admin?) %>
+                <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+        </footer>
     <% end %>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= movie.trailer %>" frameborder="0" allowfullscreen></iframe>
-    <%= link_to 'Edit', edit_movie_path(movie) %>
-
-    <% if current_user.try(:admin?) %>
-        <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <% end %>
-    <br >
-  <% end %>
 </section>
