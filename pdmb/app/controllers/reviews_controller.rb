@@ -36,7 +36,8 @@ class ReviewsController < ApplicationController
     if @review.update(review_params)
       redirect_to session.delete(:return_to)
     else
-      edit_movie_review_path(@movie, review)
+      render :edit
+      #edit_movie_review_path(@movie, @review)
     end
   end
 
