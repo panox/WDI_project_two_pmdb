@@ -1,17 +1,5 @@
 <%= form_for(@movie) do |f| %>
 
-  <% if @movie.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
-
-      <ul>
-      <% @movie.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="row">
     <div class="small-8 columns">
       <div class="large-2 columns">
@@ -19,6 +7,9 @@
       </div>
       <div class="large-10 columns">
         <%= f.text_field :name %>
+        <% if @movie.errors[:name][0] %>
+          <small class="error"><%= @movie.errors[:name][0] %></small>
+        <% end %>
       </div>
     </div>
   </div>
@@ -29,7 +20,10 @@
         <%= f.label :director_id, class: "left inline" %><br>
       </div>
       <div class="large-10 columns">
-        <%= f.collection_select(:director_id, Director.all, :id, :name) %>
+        <%= f.collection_select(:director_id, Director.all, :id, :name,  include_blank: "Select Director") %>
+        <% if @movie.errors[:director_id][0] %>
+          <small class="error"><%= @movie.errors[:director_id][0] %></small>
+        <% end %>
       </div>
     </div>
   </div>
@@ -41,6 +35,9 @@
       </div>
       <div class="large-10 columns">
         <%= f.text_field :year %>
+        <% if @movie.errors[:year][0] %>
+          <small class="error"><%= @movie.errors[:year][0] %></small>
+        <% end %>
       </div>
     </div>
   </div>
@@ -52,6 +49,9 @@
       </div>
       <div class="large-10 columns">
         <%= f.text_field :country %>
+        <% if @movie.errors[:country][0] %>
+          <small class="error"><%= @movie.errors[:country][0] %></small>
+        <% end %>
       </div>
     </div>
   </div>
@@ -63,6 +63,9 @@
       </div>
       <div class="large-10 columns">
         <%= f.text_area :trailer %>
+        <% if @movie.errors[:country][0] %>
+          <small class="error"><%= @movie.errors[:trailer][0] %></small>
+        <% end %>
       </div>
     </div>
   </div>
