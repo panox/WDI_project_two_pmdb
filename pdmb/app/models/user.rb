@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
   has_many :reviews, dependent: :destroy
 
+  mount_uploader :picture, PicUploader
+
   def name=(s)
     write_attribute(:username, s.to_s.titleize)
   end

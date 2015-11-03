@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#image upload
+gem 'carrierwave'
 #foundation
 gem 'foundation-rails'
 # search
