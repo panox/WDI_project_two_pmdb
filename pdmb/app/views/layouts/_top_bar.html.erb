@@ -3,11 +3,9 @@
   <section class="top-bar-section">
     <ul class="left">
       <% if user_signed_in? %>
-        <li class="has-dropdown">
-          <%= link_to 'My Page', current_user %>
-          <ul class="has-dropdown">
-            <li><%= link_to 'Account', edit_user_registration_path %></li>
-            <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to 'My Page', current_user %></li>
+        <li><%= link_to 'Account', edit_user_registration_path %></li>
+        <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
           </ul>
         </li>
       <% else %>
