@@ -29,7 +29,8 @@ class DirectorsController < ApplicationController
 
     respond_to do |format|
       if @director.save
-        format.html { redirect_to @director, notice: 'Director was successfully created.' }
+        flash[:success] = "Director was successfully created."
+        format.html { redirect_to @director}
         format.json { render :show, status: :created, location: @director }
       else
         format.html { render :new }
@@ -43,7 +44,8 @@ class DirectorsController < ApplicationController
   def update
     respond_to do |format|
       if @director.update(director_params)
-        format.html { redirect_to @director, notice: 'Director was successfully updated.' }
+        flash[:success] = "Director was successfully updated."
+        format.html { redirect_to @director }
         format.json { render :show, status: :ok, location: @director }
       else
         format.html { render :edit }
@@ -58,7 +60,8 @@ class DirectorsController < ApplicationController
     if current_user.try(:admin?)
       @director.destroy
       respond_to do |format|
-        format.html { redirect_to directors_url, notice: 'Director was successfully destroyed.' }
+        flash[:success] = "Director was successfully destroyed."
+        format.html { redirect_to directors_url }
         format.json { head :no_content }
       end
     end
