@@ -1,4 +1,5 @@
 <%= form_for(@movie) do |f| %>
+
   <% if @movie.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
@@ -11,27 +12,63 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="row">
+    <div class="small-8 columns">
+      <div class="large-2 columns">
+        <%= f.label :name, class: "left inline" %><br>
+      </div>
+      <div class="large-10 columns">
+        <%= f.text_field :name %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :director_id %><br>
-    <%= f.collection_select(:director_id, Director.all, :id, :name) %>
+
+  <div class="row">
+    <div class="small-8 columns">
+      <div class="large-2 columns">
+        <%= f.label :director_id, class: "left inline" %><br>
+      </div>
+      <div class="large-10 columns">
+        <%= f.collection_select(:director_id, Director.all, :id, :name) %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :year %><br>
-    <%= f.text_field :year %>
+
+  <div class="row">
+    <div class="small-8 columns">
+      <div class="large-2 columns">
+        <%= f.label :year, class: "left inline" %><br>
+      </div>
+      <div class="large-10 columns">
+        <%= f.text_field :year %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :country %><br>
-    <%= f.text_field :country %>
+
+  <div class="row">
+    <div class="small-8 columns">
+      <div class="large-2 columns">
+        <%= f.label :country, class: "left inline" %><br>
+      </div>
+      <div class="large-10 columns">
+        <%= f.text_field :country %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :trailer %><br>
-    <%= f.text_area :trailer %>
+
+  <div class="row">
+    <div class="small-8 columns">
+      <div class="large-2 columns">
+        <%= f.label :trailer, class: "left inline" %><br>
+      </div>
+      <div class="large-10 columns">
+        <%= f.text_area :trailer %>
+      </div>
+    </div>
   </div>
-  <div class="actions">
+
     <%= f.submit %>
-  </div>
+
+
+
 <% end %>
