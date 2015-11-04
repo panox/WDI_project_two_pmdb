@@ -4,49 +4,36 @@
   <%= devise_error_messages! %>
 
   <div class="row">
-    <div class="small-8 columns">
-      <div class="large-2 columns">
-        <%= f.label :username, class: "left inline" %>
-      </div>
-      <div class="large-10 columns">
-        <%= f.text_field :username %>
-      </div>
+    <div class="large-8 columns">
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-8 columns">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true %>
     </div>
   </div>
 
   <div class="row">
     <div class="small-8 columns">
-      <div class="large-2 columns">
-        <%= f.label :email, class: "left inline" %>
-      </div>
-      <div class="large-10 columns">
-        <%= f.email_field :email, autofocus: true %>
-      </div>
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "off" %>
     </div>
   </div>
 
   <div class="row">
     <div class="small-8 columns">
-      <div class="large-2 columns">
-        <%= f.label :password %>
-      </div>
-      <div class="large-10 columns">
-        <%= f.password_field :password, autocomplete: "off" %>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="small-8 columns">
-      <div class="large-2 columns">
-        <%= f.label :password_confirmation %>
-      </div>
-      <div class="large-10 columns">
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      </div>
+      <%= f.label :password_confirmation %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %>
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
   </div>
 
