@@ -23,17 +23,26 @@
     <%= link_to 'Back', movies_path %>
   </footer>
 
-  <h4>Reviews</h4>
-
-  <% @movie.reviews.reverse_each do |review| %>
-    <%= review.title %> By <%= link_to review.user.username, review.user %>
-    <br >
-    <%= review.content %>
-    <br>
-    <% if user_signed_in? && current_user.email == review.user.email %>
-      <%= link_to 'Edit', edit_movie_review_path(@movie, review) %>
-      <%= link_to 'Destroy', movie_review_path(@movie, review), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <header class="row">
+    <h4>Reviews</h4>
+  </header>
+  <section>
+    <% @movie.reviews.reverse_each do |review| %>
+    <div class="row">
+      <%= link_to review.user.username, review.user %>
+      <%= review.title %> 
+    </div>
+    <div class="row">
+      <%= review.content %>
+    </div>
+    <div class="row">
+      <% if user_signed_in? && current_user.email == review.user.email %>
+        <%= link_to 'Edit', edit_movie_review_path(@movie, review) %>
+        <%= link_to 'Destroy', movie_review_path(@movie, review), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    </div>
     <% end %>
-  <% end %>
+  </section>
+  
 
 </div>
