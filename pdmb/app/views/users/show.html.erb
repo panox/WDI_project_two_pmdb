@@ -1,21 +1,32 @@
-<p>
+<div class="row">
   <%= @user.username %>
-</p>
-
-<p>
+</div>
+<div class="row">
   <%= image_tag @user.picture %>
-</p>
-
-<h4>Reviews</h4>
-
-<% @user.reviews.reverse_each do |review| %>
-  <br >
-  <%= review.title %> For <%= review.movie.name if review.movie %>
-  <br >
-  <%= review.content %>
-  <br >
-  <% if user_signed_in? && current_user.email == review.user.email %>
-    <%= link_to 'Edit', edit_movie_review_path(review.movie.id, review) %>
-    <%= link_to 'Destroy', movie_review_path(review.movie.id, review), method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+<div class="row">
+  <h5>Reviews</h5>
+</div>
+<div class="row">
+  <% @user.reviews.reverse_each do |review| %>
+    <div class="row">
+    <%= review.title %> For <%= review.movie.name if review.movie %>
+    <% if user_signed_in? && current_user.email == review.user.email %>
+      <%= link_to 'Edit', edit_movie_review_path(review.movie.id, review) %>
+      <%= link_to 'Destroy', movie_review_path(review.movie.id, review), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+    </div>
+    <div class="row">
+    <%= review.content %>
+    </div>
   <% end %>
-<% end %>
+</div>
+  
+
+
+
+  
+
+
+
+
