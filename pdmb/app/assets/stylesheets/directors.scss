@@ -4,7 +4,6 @@
 .directors-index {
 
   li > header {
-    font-size: 1.125em;
     margin-bottom: 7px;
   }
 
@@ -27,4 +26,8 @@
     width: 100%;
     height: auto;
   }
+}
+
+.director-title {
+  font-size: 1.125em;
 }
