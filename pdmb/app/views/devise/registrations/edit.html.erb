@@ -1,9 +1,6 @@
 <div class="edit-account">
   <div class="row">
-    <div class="medium-1 columns ">
-      <%= link_to "Back", :back, class: "button tiny secondary" %>
-    </div>
-    <div class="medium-4 columns end">
+    <div class="medium-4 columns">
       <h2>Edit <%= resource_name.to_s.humanize %></h2>
     </div>
   </div>
@@ -53,7 +50,7 @@
 
     <div class="row">
       <div class="large-10 columns">
-        <%= f.file_field :picture %>
+        <%= f.file_field :picture, class: "tiny disabled button" %>
       </div>
     </div>
 
