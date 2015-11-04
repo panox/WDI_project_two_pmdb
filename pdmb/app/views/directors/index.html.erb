@@ -14,10 +14,18 @@
             <%= image_tag director.picture %>
           </section>
           <footer>
-            <%= link_to 'Edit', edit_director_path(director) %>
-            <% if current_user.try(:admin?) %>
-              <%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' } %>
-            <% end %>
+            <div class="row">
+              <div class="medium-8 medium-centered columns">
+                <%= link_to 'Edit', edit_director_path(director), class: "button round radius info expand" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="medium-8 medium-centered columns">
+                <% if current_user.try(:admin?) %>
+                  <%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <% end %>
+              </div>
+            </div>
           </footer>
         </li>
       <% end %>
