@@ -20,7 +20,7 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= movie.trailer %>" frameborder="0" allowfullscreen></iframe>
         </section>
         <footer>
-            <%= link_to 'Edit', edit_movie_path(movie) %>   
+            <%= link_to 'Edit', edit_movie_path(movie), class: "button info tiny round" %>
             <% if current_user.try(:admin?) %>
                 <%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %>
             <% end %>
