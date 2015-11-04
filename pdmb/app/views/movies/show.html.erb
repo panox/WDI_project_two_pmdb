@@ -22,7 +22,7 @@ By <%= link_to @movie.director.name, @movie.director if @movie.director%>
 <h4>Reviews</h4>
 
 <% @movie.reviews.reverse_each do |review| %>
-  <%= review.title %> By <%= review.user.username %>
+  <%= review.title %> By <%= link_to review.user.username, review.user %>
   <br >
   <%= review.content %>
   <br>
