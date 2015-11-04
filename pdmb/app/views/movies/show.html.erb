@@ -29,9 +29,14 @@
         <%= link_to review.user.username, review.user %>
         <%= review.title %> 
         <% if user_signed_in? && current_user.email == review.user.email %>
-          <%= link_to 'Edit', edit_movie_review_path(@movie, review) %>
-          <%= link_to 'Destroy', movie_review_path(@movie, review), method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to edit_movie_review_path(@movie, review) do %>
+            <i class="fi-page-edit"></i>
+          <% end %>
+          <%= link_to movie_review_path(@movie, review), method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fi-x"></i>
+          <% end %>
         <% end %>
+
       </div>
       <div class="row">
         <div class="medium-10 columns">
