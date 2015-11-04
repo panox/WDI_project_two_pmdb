@@ -8,11 +8,11 @@
         <% @directors.each do |director| %>
           <li>
             <header>
-              <%= link_to director.name, director %>
-              <%= director.country %>
+              <%= director.name %>
+              ( <em><%= director.country %></em> )
             </header>
             <section>
-              <%= image_tag director.picture %>
+              <%= link_to image_tag(director.picture), director %>
             </section>
             <footer>
               <div class="row">
