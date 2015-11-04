@@ -1,4 +1,6 @@
-<h2>Log in</h2>
+<div class="row">
+  <h2>Log in</h2>
+</div>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   
@@ -26,16 +28,18 @@
 
   <% if devise_mapping.rememberable? -%>
     <div class="row">
-      <div class="small-4 small-offset-6 columns">
+      <div class="medium-3 medium-offset-3 columns">
+        <%= render "devise/shared/forgot_password" %>
+      </div>
+      <div class="small-3 columns end">
         <%= f.check_box :remember_me %>
         <%= f.label :remember_me %>
       </div>
     </div>
   <% end -%>
 
-
+  <div class="row">
     <%= f.submit "Log in" %>
+  </div>
 
 <% end %>
-
-<%= render "devise/shared/forgot_password" %>
