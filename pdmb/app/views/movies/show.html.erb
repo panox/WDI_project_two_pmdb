@@ -27,7 +27,7 @@
   </footer>
   <section id="movie-reviews">
     <% @movie.reviews.reverse_each do |review| %>
-      <div class="row">
+      <div class="row review-title">
         <%= link_to review.user.username, review.user %>
         <%= review.title %> 
         <% if user_signed_in? && current_user.email == review.user.email %>
@@ -40,7 +40,7 @@
         <% end %>
 
       </div>
-      <div class="row">
+      <div class="row review-cont">
         <div class="medium-10 columns">
           <%= review.content %>
         </div>  
