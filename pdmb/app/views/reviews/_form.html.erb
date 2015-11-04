@@ -3,44 +3,32 @@
 <%= form_for([@movie, @review]) do |f| %>
 
     <div class="row">
-      <div class="small-4 columns">
-        <div class="large-4 columns">
-          <%= f.label :title, class: "left inline" %>
-        </div>
-        <div class="large-8 columns">
-          <%= f.text_field :title %>
-          <% if @review.errors[:title][0] %>
-            <small class="error"><%= @review.errors[:title][0] %></small>
-          <% end %>
-        </div>
+      <div class="large-8 columns">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+        <% if @review.errors[:title][0] %>
+          <small class="error"><%= @review.errors[:title][0] %></small>
+        <% end %>
       </div>
     </div>
 
     <div class="row">
-      <div class="small-4 columns">
-        <div class="large-4 columns">
-          <%= f.label :content, class: "left inline" %>
-        </div>
-        <div class="large-8 columns">
-          <%= f.text_area :content %>
-          <% if @review.errors[:content][0] %>
-            <small class="error"><%= @review.errors[:content][0] %></small>
-          <% end %>
-        </div>
+      <div class="large-8 columns">
+        <%= f.label :content %>
+        <%= f.text_area :content %>
+        <% if @review.errors[:content][0] %>
+          <small class="error"><%= @review.errors[:content][0] %></small>
+        <% end %>
       </div>
     </div>
 
     <div class="row">
-      <div class="small-4 columns">
-        <div class="large-4 columns">
-          <%= f.label :rating, "Rate 1 - 5 ", class: "left inline" %>
-        </div>
-        <div class="large-8 columns">
-          <%= f.text_field :rating %>
-          <% if @review.errors[:rating][0] %>
-            <small class="error"><%= @review.errors[:rating][0] %></small>
-          <% end %>
-        </div>
+      <div class="large-8 columns">
+        <%= f.label :rating, "Rate 1 - 5 " %>
+        <%= f.text_field :rating %>
+        <% if @review.errors[:rating][0] %>
+          <small class="error"><%= @review.errors[:rating][0] %></small>
+        <% end %>
       </div>
     </div>
 
