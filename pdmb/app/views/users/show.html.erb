@@ -1,13 +1,13 @@
 <div class="row">
-  <%= @user.username %>
-</div>
-<div class="row">
-  <%= image_tag @user.picture %>
-</div>
-<div class="row">
-  <h5>Reviews</h5>
-</div>
-<div class="row">
+  <div class="medium-2 columns">
+    <div>
+      <%= @user.username %>
+    </div>
+    <div>
+      <%= image_tag @user.picture %>
+    </div>
+  </div>
+  <div class="medium-10 columns">
   <% @user.reviews.reverse_each do |review| %>
     <div class="row">
     <%= review.title %> For <%= review.movie.name if review.movie %>
@@ -20,6 +20,7 @@
     <%= review.content %>
     </div>
   <% end %>
+  </div>
 </div>
   
 
