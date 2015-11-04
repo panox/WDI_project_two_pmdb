@@ -10,7 +10,7 @@
   <div class="medium-10 columns">
   <% @user.reviews.reverse_each do |review| %>
     <div class="row">
-    <%= review.title %> For <%= review.movie.name if review.movie %>
+    <%= review.title %> For <%= link_to review.movie.name, review.movie if review.movie %>
     <% if user_signed_in? && current_user.email == review.user.email %>
       <%= link_to edit_movie_review_path(review.movie.id, review) do %>
         <i class="fi-page-edit"></i>
