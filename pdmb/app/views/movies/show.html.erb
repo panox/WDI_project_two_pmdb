@@ -19,11 +19,11 @@
     </div>
   </section>
   <footer class="row">
-    <%= link_to 'Edit', edit_movie_path(@movie) %> |
+    <%= link_to 'Edit', edit_movie_path(@movie) %>
     <%= link_to 'Back', movies_path %>
+    <button id="movie-reviews-title">Reviews</button> 
   </footer>
-
-  <section>
+  <section id="movie-reviews">
     <% @movie.reviews.reverse_each do |review| %>
       <div class="row">
         <%= link_to review.user.username, review.user %>
