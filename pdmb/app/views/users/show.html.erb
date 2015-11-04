@@ -12,8 +12,12 @@
     <div class="row">
     <%= review.title %> For <%= review.movie.name if review.movie %>
     <% if user_signed_in? && current_user.email == review.user.email %>
-      <%= link_to 'Edit', edit_movie_review_path(review.movie.id, review) %>
-      <%= link_to 'Destroy', movie_review_path(review.movie.id, review), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to edit_movie_review_path(review.movie.id, review) do %>
+        <i class="fi-page-edit"></i>
+      <% end %>
+      <%= link_to movie_review_path(review.movie.id, review), method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <i class="fi-x"></i>
+      <% end %>
     <% end %>
     </div>
     <div class="row">
