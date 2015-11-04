@@ -26,7 +26,7 @@ class ReviewsController < ApplicationController
         format.json { render :show, status: :created, location: @review }
       else
         flash[:alert] = 'There was a problem creating the Review.'
-        format.html { render :new }
+        format.html { render 'movies/show' }
         format.json { render json: @review.errors, status: :unprocessable_entity }
       end
     end
@@ -40,7 +40,7 @@ class ReviewsController < ApplicationController
       redirect_to session.delete(:return_to)
     else
       flash[:alert] = 'There was a problem updating the Review.'
-      render :edit
+      render 'movies/edit'
       #edit_movie_review_path(@movie, @review)
     end
   end
