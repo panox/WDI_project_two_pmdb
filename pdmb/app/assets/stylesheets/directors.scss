@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .directors-index {
+
+  li > header {
+    font-size: 1.25em;
+    a {
+      color: black;
+    }
+  }
+
   footer {
     a {
       margin-top: 10px; 
