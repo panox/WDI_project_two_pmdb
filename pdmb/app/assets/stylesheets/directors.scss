@@ -1,6 +1,14 @@
 // Place all the styles related to the Directors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.directors-index {
+  footer {
+    a {
+      margin-top: 10px; 
+      margin-bottom: 0px;
+    }
+  }
+}
 
 .director-show {
   margin-bottom: 14px;

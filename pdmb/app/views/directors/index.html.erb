@@ -1,34 +1,36 @@
-<div class="row index">
-  <h1>Directors</h1>
-</div>
-<div class="row index">
-  <div class="medium-8 medium-offset-2 columns">
-    <ul class="medium-block-grid-2">
-      <% @directors.each do |director| %>
-        <li>
-          <header>
-            <%= link_to director.name, director %>
-            <%= director.country %>
-          </header>
-          <section>
-            <%= image_tag director.picture %>
-          </section>
-          <footer>
-            <div class="row">
-              <div class="medium-8 medium-centered columns">
-                <%= link_to 'Edit', edit_director_path(director), class: "button round radius info expand" %>
+<div class="directors-index">
+  <div class="row index">
+    <h1>Directors</h1>
+  </div>
+  <div class="row index">
+    <div class="medium-8 medium-offset-2 columns">
+      <ul class="medium-block-grid-2">
+        <% @directors.each do |director| %>
+          <li>
+            <header>
+              <%= link_to director.name, director %>
+              <%= director.country %>
+            </header>
+            <section>
+              <%= image_tag director.picture %>
+            </section>
+            <footer>
+              <div class="row">
+                <div class="medium-8 medium-centered columns">
+                  <%= link_to 'Edit', edit_director_path(director), class: "button round radius info expand" %>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="medium-8 medium-centered columns">
-                <% if current_user.try(:admin?) %>
-                  <%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' } %>
-                <% end %>
+              <div class="row">
+                <div class="medium-8 medium-centered columns">
+                  <% if current_user.try(:admin?) %>
+                    <%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <% end %>
+                </div>
               </div>
-            </div>
-          </footer>
-        </li>
-      <% end %>
-    </ul>
+            </footer>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
