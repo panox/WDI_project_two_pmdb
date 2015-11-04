@@ -19,9 +19,11 @@
     </div>
   </section>
   <footer class="row">
-    <%= link_to 'Edit', edit_movie_path(@movie), class: "button tiny" %>
-    <%= link_to 'Back', movies_path, class: "button tiny" %>
-    <button id="movie-reviews-title" class="button tiny">Reviews</button> 
+    <div class="medium-3 medium-offset-2 columns">
+      <%= link_to 'Back', movies_path, class: "button tiny" %>
+      <%= link_to 'Edit', edit_movie_path(@movie), class: "button tiny" %>
+      <button id="movie-reviews-btn" class="button info tiny">Reviews</button>
+    </div>
   </footer>
   <section id="movie-reviews">
     <% @movie.reviews.reverse_each do |review| %>
