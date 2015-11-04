@@ -1,12 +1,9 @@
-<div class="row index">
-  <h1>Users</h1>
-</div>
-<div class="row index">
+<div class="row index user-index">
   <div class="medium-8 medium-offset-2 columns">
     <ul class="medium-block-grid-2">
       <% @users.each do |user| %>
         <li>
-          <div>
+          <div class="username">
             <%= user.username %>
           </div>
           <div>
