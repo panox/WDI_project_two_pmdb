@@ -1,59 +1,71 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { :multipart => true, method: :put }) do |f| %>
-  <%= devise_error_messages! %>
-
-
+<div class="edit-account">
   <div class="row">
-    <div class="large-10 columns">
-      <%= f.label :username %>
-      <%= f.text_field :username %>
+    <div class="medium-1 columns ">
+      <%= link_to "Back", :back, class: "button tiny secondary" %>
+    </div>
+    <div class="medium-4 columns end">
+      <h2>Edit <%= resource_name.to_s.humanize %></h2>
     </div>
   </div>
 
-  <div class="row">
-    <div class="large-10 columns">
-      <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true %>
-    </div>
-  </div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { :multipart => true, method: :put }) do |f| %>
+    <%= devise_error_messages! %>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+
+    <div class="row">
+      <div class="large-10 columns">
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-10 columns">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+    </div>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+
+    <div class="row">
+      <div class="large-10 columns">
+        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-10 columns">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-10 columns">
+        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+        <%= f.password_field :current_password, autocomplete: "off" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-10 columns">
+        <%= f.file_field :picture %>
+      </div>
+    </div>
+
+    <div class="row">
+      <%= f.submit "Update", class: "button small" %>
+    </div>
+
   <% end %>
 
   <div class="row">
-    <div class="large-10 columns">
-      <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
+    Unhappy? 
+    <%= button_to "Cancel my account", registration_path(resource_name), class: "button tiny alert", data: { confirm: "Are you sure?" }, method: :delete %>
   </div>
 
-  <div class="row">
-    <div class="large-10 columns">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="large-10 columns">
-      <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-      <%= f.password_field :current_password, autocomplete: "off" %>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="large-10 columns">
-      <%= f.file_field :picture %>
-    </div>
-  </div>
-
-
-    <%= f.submit "Update" %>
-
-<% end %>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
