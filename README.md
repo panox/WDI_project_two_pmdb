@@ -31,6 +31,7 @@ Url:
 
 * Using the founation_and_overides.scss file and changing the values of the sass variables 
 * Trying to match my mockups
+* Getting foundation fonts to work on heroku
 
 ### what would you have done differently if you had to do it again 
 
