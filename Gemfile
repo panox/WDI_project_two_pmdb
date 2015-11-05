@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#fog gem
+gem 'fog', '1.29.0'
 #image upload
 gem 'carrierwave'
 #foundation
