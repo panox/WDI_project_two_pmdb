@@ -34,7 +34,7 @@
         <%= f.label :picture, class: "left inline" %><br>
       </div>
       <div class="large-10 columns">
-        <%= f.text_area :picture %>
+        <%= f.file_field :picture %>
         <% if @director.errors[:picture][0] %>
           <small class="error"><%= @director.errors[:picture][0] %></small>
         <% end %>

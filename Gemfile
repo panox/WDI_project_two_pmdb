@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
 
 #fog gem
-gem 'fog', '1.29.0'
+
 #image upload
 gem 'carrierwave'
+
+gem 'fog', '1.35.0'
 #foundation
 gem 'foundation-rails'
 # search
