@@ -4,6 +4,14 @@ A Movie Database
 
 Url:
 
+	* A user can create/edit a profile
+	* A user can create/edit a movie
+	* A user can create/edit a director
+	* A user can add/edit/remove a review for a movie
+	* A user can add/edit a rating for a movie
+	* A user can search for a movie title
+	* Only the admin can delete a movie/director
+
 
 #### Gems
 	* Foundation
