@@ -32,6 +32,7 @@ Url: http://afternoon-bastion-3860.herokuapp.com/
 * Using the founation_and_overides.scss file and changing the values of the sass variables 
 * Trying to match my mockups
 * Getting foundation fonts to work on heroku
+* Making heroku look like localhost
 
 ### what would you have done differently if you had to do it again 
 
