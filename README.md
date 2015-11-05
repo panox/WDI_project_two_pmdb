@@ -2,7 +2,7 @@
 
 A Movie Database
 
-Url:
+Url: http://afternoon-bastion-3860.herokuapp.com/
 
 	* A user can create/edit a profile
 	* A user can create/edit a movie
