@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-#fog gem
-
+#heroku puma
+gem 'puma'
 #image upload
 gem 'carrierwave'
-
+#fog gem
 gem 'fog', '1.35.0'
 #foundation
 gem 'foundation-rails'
