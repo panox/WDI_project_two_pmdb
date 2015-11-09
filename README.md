@@ -12,6 +12,10 @@ Pmd is a movie database which contains users, movies and directors.
 	* A user can search for a movie title
 	* Only the admin can delete a movie/director
 
+#### Index Page Screenshot
+
+![image](http://imgur.com/dREfiJ9.png)
+
 
 #### Gems
 	* Foundation
