@@ -1,8 +1,8 @@
 # PMDB
 
-A Movie Database
+Pmd is a movie database which contains users, movies and directors.
 
-Url: http://afternoon-bastion-3860.herokuapp.com/
+###http://afternoon-bastion-3860.herokuapp.com/
 
 	* A user can create/edit a profile
 	* A user can create/edit a movie
@@ -19,6 +19,16 @@ Url: http://afternoon-bastion-3860.herokuapp.com/
 	* Pg_search
 	* Device
 	* Yaml_db
+	
+#### Databas Models
+
+![image](http://imgur.com/8jVWI6r.png)
+
+#### Mockups
+
+![image](http://imgur.com/pnp2TRp.png)
+
+
 
 ### what was a win
 
