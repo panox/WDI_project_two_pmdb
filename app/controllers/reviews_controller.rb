@@ -3,17 +3,13 @@ class ReviewsController < ApplicationController
   before_action :set_movie
   before_action :authenticate_user!
 
-  # GET /reviews/new
   def new
     @review = Review.new
   end
 
-  # GET /reviews/1/edit
   def edit
   end
 
-  # POST /reviews
-  # POST /reviews.json
   def create
     @review = Review.new(review_params)
     @review.user_id = current_user.id
@@ -32,8 +28,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /reviews/1
-  # PATCH/PUT /reviews/1.json
   def update
     if @review.update(review_params)
       flash[:success] = "Review was successfully updated."
@@ -41,12 +35,9 @@ class ReviewsController < ApplicationController
     else
       flash[:alert] = 'There was a problem updating the Review.'
       render 'movies/edit'
-      #edit_movie_review_path(@movie, @review)
     end
   end
 
-  # DELETE /reviews/1
-  # DELETE /reviews/1.json
   def destroy
     @review.destroy
     respond_to do |format|
@@ -57,7 +48,6 @@ class ReviewsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_review
       @review = Review.find(params[:id])
     end
@@ -66,7 +56,6 @@ class ReviewsController < ApplicationController
       @movie = Movie.find(params[:movie_id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
       params.require(:review).permit(:title, :content, :user_id, :movie_id, :rating)
     end
